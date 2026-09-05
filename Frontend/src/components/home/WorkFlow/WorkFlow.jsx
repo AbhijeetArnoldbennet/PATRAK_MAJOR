@@ -1,6 +1,6 @@
 import {
   ClipboardList,
-  Building2,
+  CheckCircle,
   Settings,
   Rocket,
 } from "lucide-react";
@@ -12,84 +12,61 @@ const workflow = [
     icon: <ClipboardList size={34} />,
     title: "Request a Clinic",
     description:
-      "Submit your clinic details and onboarding request.",
+      "Submit your clinic details and select the modules your clinic requires.",
   },
   {
-    icon: <Building2 size={34} />,
-    title: "Workspace Created",
+    icon: <CheckCircle size={34} />,
+    title: "Get Approved",
     description:
-      "PATRAK creates a secure cloud workspace for your clinic.",
+      "The PATRAK administrator reviews your request and approves your clinic workspace.",
   },
   {
     icon: <Settings size={34} />,
-    title: "Configure Modules",
+    title: "Configure Your Modules",
     description:
-      "Choose the modules your clinic requires.",
+      "Set up the features your clinic needs, with required dependencies included automatically.",
   },
   {
     icon: <Rocket size={34} />,
     title: "Go Live",
     description:
-      "Start managing your clinic with PATRAK.",
+      "Access your secure clinic workspace and start managing daily operations with PATRAK.",
   },
 ];
 
 function WorkFlow() {
   return (
     <section className="max-w-7xl mx-auto px-8 py-24">
-
       {/* Heading */}
-
       <div className="text-center">
-
-        <p className="uppercase tracking-widest text-[#54ACBF] font-semibold">
-
-          How It Works
-
-        </p>
-
-        <h2 className="mt-3 text-4xl font-bold text-[#023859]">
-
+        <h2 className="text-4xl font-bold text-[#023859]">
           Getting Started is Simple
-
         </h2>
 
         <p className="mt-5 max-w-2xl mx-auto text-gray-600 leading-8">
-
-          From requesting your clinic workspace to going live,
-          PATRAK makes onboarding simple, secure, and hassle-free.
-
+            PATRAK brings essential clinic operations together in one centralized
+            platform, helping teams manage patients, staff, appointments, and
+            day-to-day workflows more efficiently.
         </p>
-
       </div>
 
       {/* Timeline */}
-
       <div className="relative mt-24">
-
         {/* Horizontal Line */}
-
-        <div className="hidden lg:block absolute top-10 left-24 right-24 h-0.5 bg-[#D8EEF2]"></div>
+        <div className="hidden lg:block absolute top-10 left-24 right-24 h-0.5 bg-[#D8EEF2]" />
 
         {/* Steps */}
-
         <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-10">
-
           {workflow.map((step) => (
-
             <HowItWorksCard
               key={step.title}
               icon={step.icon}
               title={step.title}
               description={step.description}
             />
-
           ))}
-
         </div>
-
       </div>
-
     </section>
   );
 }
