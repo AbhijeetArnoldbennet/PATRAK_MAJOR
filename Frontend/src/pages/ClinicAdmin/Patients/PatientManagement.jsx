@@ -41,7 +41,7 @@ function PatientManagement() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/patients",
+        "https://patrak-backend.vercel.app/api/patients",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -84,7 +84,7 @@ function PatientManagement() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/patients/${patient._id}/history`,
+        `https://patrak-backend.vercel.app/api/patients/${patient._id}/history`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -159,8 +159,8 @@ function PatientManagement() {
       const token = localStorage.getItem("token");
 
       const url = editingPatient
-        ? `http://localhost:5000/api/patients/${editingPatient._id}`
-        : "http://localhost:5000/api/patients";
+        ? `https://patrak-backend.vercel.app/api/patients/${editingPatient._id}`
+        : "https://patrak-backend.vercel.app/api/patients";
 
       const response = await fetch(url, {
         method: editingPatient ? "PUT" : "POST",
@@ -242,7 +242,7 @@ function PatientManagement() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/patients/${id}`,
+        `https://patrak-backend.vercel.app/api/patients/${id}`,
         {
           method: "DELETE",
           headers: {

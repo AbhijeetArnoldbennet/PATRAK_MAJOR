@@ -61,7 +61,7 @@ function DoctorSchedule() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/staff",
+        "https://patrak-backend.vercel.app/api/staff",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -127,7 +127,7 @@ function DoctorSchedule() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/doctor-schedules/${doctorId}`,
+        `https://patrak-backend.vercel.app/api/doctor-schedules/${doctorId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -187,7 +187,7 @@ function DoctorSchedule() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/doctor-holidays/${doctorId}`,
+        `https://patrak-backend.vercel.app/api/doctor-holidays/${doctorId}`,
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -401,7 +401,7 @@ function DoctorSchedule() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/doctor-schedules",
+        "https://patrak-backend.vercel.app/api/doctor-schedules",
         {
           method: "POST",
 
@@ -465,7 +465,7 @@ function DoctorSchedule() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/doctor-holidays",
+        "https://patrak-backend.vercel.app/api/doctor-holidays",
         {
           method: "POST",
 
@@ -525,7 +525,7 @@ function DoctorSchedule() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        `http://localhost:5000/api/doctor-holidays/${holidayId}`,
+        `https://patrak-backend.vercel.app/api/doctor-holidays/${holidayId}`,
         {
           method: "DELETE",
 

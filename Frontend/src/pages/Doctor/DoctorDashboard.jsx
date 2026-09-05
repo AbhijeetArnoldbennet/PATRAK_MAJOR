@@ -24,7 +24,7 @@ function DoctorDashboard() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/appointments",
+        "https://patrak-backend.vercel.app/api/appointments",
         {
           method: "GET",
           headers: {

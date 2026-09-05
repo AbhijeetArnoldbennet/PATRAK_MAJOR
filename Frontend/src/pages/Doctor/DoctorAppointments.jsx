@@ -28,7 +28,7 @@ function DoctorAppointments() {
       }
 
       const response = await fetch(
-        "http://localhost:5000/api/appointments",
+        "https://patrak-backend.vercel.app/api/appointments",
         {
           method: "GET",
           headers: {
@@ -77,7 +77,7 @@ function DoctorAppointments() {
       }
 
       const response = await fetch(
-        `http://localhost:5000/api/appointments/${appointmentId}/status`,
+        `https://patrak-backend.vercel.app/api/appointments/${appointmentId}/status`,
         {
           method: "PATCH",
           headers: {

@@ -84,7 +84,7 @@ function Kiosk() {
         setError("");
 
         const response = await fetch(
-          `http://localhost:5000/api/kiosk/${kioskCode}`
+          `https://patrak-backend.vercel.app/api/kiosk/${kioskCode}`
         );
 
         const data = await response.json();
@@ -134,7 +134,7 @@ function Kiosk() {
       setPatients([]);
 
       const response = await fetch(
-        `http://localhost:5000/api/kiosk/${kioskCode}/patients?search=${encodeURIComponent(
+        `https://patrak-backend.vercel.app/api/kiosk/${kioskCode}/patients?search=${encodeURIComponent(
           search.trim()
         )}`
       );
@@ -180,7 +180,7 @@ function Kiosk() {
       setDoctorError("");
 
       const response = await fetch(
-        `http://localhost:5000/api/kiosk/${kioskCode}/doctors`
+        `https://patrak-backend.vercel.app/api/kiosk/${kioskCode}/doctors`
       );
 
       const data = await response.json();
@@ -233,7 +233,7 @@ function Kiosk() {
       setLoadingSlots(true);
 
       const response = await fetch(
-        `http://localhost:5000/api/kiosk/${kioskCode}/doctors/${selectedDoctor._id}/slots?date=${date}`
+        `https://patrak-backend.vercel.app/api/kiosk/${kioskCode}/doctors/${selectedDoctor._id}/slots?date=${date}`
       );
 
       const data = await response.json();
@@ -304,7 +304,7 @@ function Kiosk() {
       setCreatingPatient(true);
 
       const response = await fetch(
-        `http://localhost:5000/api/kiosk/${kioskCode}/patients`,
+        `https://patrak-backend.vercel.app/api/kiosk/${kioskCode}/patients`,
         {
           method: "POST",
 
@@ -381,7 +381,7 @@ function Kiosk() {
       setAppointmentError("");
 
       const response = await fetch(
-        `http://localhost:5000/api/kiosk/${kioskCode}/appointments`,
+        `https://patrak-backend.vercel.app/api/kiosk/${kioskCode}/appointments`,
         {
           method: "POST",
 

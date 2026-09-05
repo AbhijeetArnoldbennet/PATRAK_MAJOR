@@ -30,7 +30,7 @@ function StaffManagement() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/staff",
+        "https://patrak-backend.vercel.app/api/staff",
         {
           method: "GET",
           headers: {
@@ -105,7 +105,7 @@ function StaffManagement() {
       const token = localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/staff",
+        "https://patrak-backend.vercel.app/api/staff",
         {
           method: "POST",
           headers: {

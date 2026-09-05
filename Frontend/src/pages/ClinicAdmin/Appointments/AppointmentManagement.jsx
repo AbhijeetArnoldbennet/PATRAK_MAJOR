@@ -98,7 +98,7 @@ function AppointmentManagement() {
           localStorage.getItem("token");
 
         const response = await fetch(
-          "http://localhost:5000/api/clinics/my-clinic",
+          "https://patrak-backend.vercel.app/api/clinics/my-clinic",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -146,7 +146,7 @@ function AppointmentManagement() {
           localStorage.getItem("token");
 
         const response = await fetch(
-          "http://localhost:5000/api/appointments/doctors",
+          "https://patrak-backend.vercel.app/api/appointments/doctors",
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -199,7 +199,7 @@ function AppointmentManagement() {
           localStorage.getItem("token");
 
         const response = await fetch(
-          `http://localhost:5000/api/patients?search=${encodeURIComponent(
+          `https://patrak-backend.vercel.app/api/patients?search=${encodeURIComponent(
             patientSearch.trim()
           )}`,
           {
@@ -254,7 +254,7 @@ function AppointmentManagement() {
         localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/appointments",
+        "https://patrak-backend.vercel.app/api/appointments",
         {
           headers: {
             Authorization: `Bearer ${token}`,
@@ -320,7 +320,7 @@ function AppointmentManagement() {
           localStorage.getItem("token");
 
         const response = await fetch(
-          `http://localhost:5000/api/appointments/available-slots?doctorId=${doctorId}&date=${appointmentDate}`,
+          `https://patrak-backend.vercel.app/api/appointments/available-slots?doctorId=${doctorId}&date=${appointmentDate}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -403,7 +403,7 @@ function AppointmentManagement() {
         localStorage.getItem("token");
 
       const response = await fetch(
-        "http://localhost:5000/api/appointments",
+        "https://patrak-backend.vercel.app/api/appointments",
         {
           method: "POST",
 
@@ -443,7 +443,7 @@ function AppointmentManagement() {
 
       const slotsResponse =
         await fetch(
-          `http://localhost:5000/api/appointments/available-slots?doctorId=${doctorId}&date=${appointmentDate}`,
+          `https://patrak-backend.vercel.app/api/appointments/available-slots?doctorId=${doctorId}&date=${appointmentDate}`,
           {
             headers: {
               Authorization: `Bearer ${token}`,
@@ -490,7 +490,7 @@ function AppointmentManagement() {
           localStorage.getItem("token");
 
         const response = await fetch(
-          `http://localhost:5000/api/appointments/${appointmentId}/cancel`,
+          `https://patrak-backend.vercel.app/api/appointments/${appointmentId}/cancel`,
           {
             method: "PATCH",
 

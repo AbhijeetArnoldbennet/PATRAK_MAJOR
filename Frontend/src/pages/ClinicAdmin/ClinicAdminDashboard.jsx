@@ -60,7 +60,7 @@ function ClinicAdminDashboard() {
     const token = localStorage.getItem("token");
 
     const response = await fetch(
-      "http://localhost:5000/api/clinics/my-clinic",
+      "https://patrak-backend.vercel.app/api/clinics/my-clinic",
       {
         method: "GET",
         headers: {
@@ -88,7 +88,7 @@ function ClinicAdminDashboard() {
     const token = localStorage.getItem("token");
 
     const response = await fetch(
-      "http://localhost:5000/api/patients",
+      "https://patrak-backend.vercel.app/api/patients",
       {
         method: "GET",
         headers: {
@@ -116,7 +116,7 @@ function ClinicAdminDashboard() {
     const token = localStorage.getItem("token");
 
     const response = await fetch(
-      "http://localhost:5000/api/appointments",
+      "https://patrak-backend.vercel.app/api/appointments",
       {
         method: "GET",
         headers: {

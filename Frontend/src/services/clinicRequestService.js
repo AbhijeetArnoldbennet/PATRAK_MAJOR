@@ -1,4 +1,4 @@
-const API_URL = "http://localhost:5000/api";
+const API_URL = "https://patrak-backend.vercel.app/api";
 
 // Public: Submit a clinic request
 export const createClinicRequest = async (clinicData) => {
