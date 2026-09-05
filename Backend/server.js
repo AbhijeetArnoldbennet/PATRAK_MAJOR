@@ -175,7 +175,7 @@ const startServer = async () => {
 
     // Start server
 
-    app.listen(PORT, () => {
+    app.listen(PORT,"0.0.0.0", () => {
       console.log(
         `PATRAK Backend running on port ${PORT}`
       );
